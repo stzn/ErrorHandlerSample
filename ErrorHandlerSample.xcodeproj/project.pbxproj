@@ -10,14 +10,12 @@
 		ABAA1A57203633DB005AF451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A56203633DB005AF451 /* AppDelegate.swift */; };
 		ABAA1A5E203633DB005AF451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAA1A5D203633DB005AF451 /* Assets.xcassets */; };
 		ABAA1A61203633DB005AF451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAA1A5F203633DB005AF451 /* LaunchScreen.storyboard */; };
-		ABAA1A6920363413005AF451 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A6820363413005AF451 /* ErrorHandler.swift */; };
 		ABAA1A6B20363548005AF451 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A6A20363548005AF451 /* RootViewController.swift */; };
 		ABAA1A6F2036371E005AF451 /* FirstFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A6E2036371E005AF451 /* FirstFlowController.swift */; };
 		ABAA1A7320364690005AF451 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A7220364690005AF451 /* FirstViewController.swift */; };
 		ABAA1A752036469D005AF451 /* FirstViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAA1A742036469D005AF451 /* FirstViewController.storyboard */; };
 		ABAA1A7D2036475E005AF451 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A782036475E005AF451 /* StoryboardLoadable.swift */; };
 		ABAA1A7F2036475E005AF451 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A7A2036475E005AF451 /* AlertShowable.swift */; };
-		ABAA1A87203647DD005AF451 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A83203647DD005AF451 /* Constants.swift */; };
 		ABAA1A88203647DD005AF451 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A84203647DD005AF451 /* Result.swift */; };
 		ABAA1A89203647DD005AF451 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A85203647DD005AF451 /* Storyboard.swift */; };
 		ABAA1A8A203647DD005AF451 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1A86203647DD005AF451 /* Errors.swift */; };
@@ -32,6 +30,11 @@
 		ABAA1AA5203667FE005AF451 /* FirstNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1AA4203667FE005AF451 /* FirstNextViewController.swift */; };
 		ABAA1AA720366809005AF451 /* FirstNextViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABAA1AA620366809005AF451 /* FirstNextViewController.storyboard */; };
 		ABAA1AA9203668C9005AF451 /* FirstNextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAA1AA8203668C9005AF451 /* FirstNextViewModel.swift */; };
+		ABBBB1C62038FD070081ECB5 /* ErrorMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB1C22038FD070081ECB5 /* ErrorMatcher.swift */; };
+		ABBBB1C72038FD070081ECB5 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB1C32038FD070081ECB5 /* ErrorHandler.swift */; };
+		ABBBB1C82038FD070081ECB5 /* DefaultErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB1C42038FD070081ECB5 /* DefaultErrorHandler.swift */; };
+		ABBBB1C92038FD070081ECB5 /* NSErrorMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB1C52038FD070081ECB5 /* NSErrorMatcher.swift */; };
+		ABBBB1CC2038FEE10081ECB5 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBBB1CB2038FEE10081ECB5 /* AlertManager.swift */; };
 		ABDA284D20379FD6009DA1E1 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA284C20379FD6009DA1E1 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,14 +44,12 @@
 		ABAA1A5D203633DB005AF451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABAA1A60203633DB005AF451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABAA1A62203633DB005AF451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ABAA1A6820363413005AF451 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		ABAA1A6A20363548005AF451 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		ABAA1A6E2036371E005AF451 /* FirstFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFlowController.swift; sourceTree = "<group>"; };
 		ABAA1A7220364690005AF451 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		ABAA1A742036469D005AF451 /* FirstViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstViewController.storyboard; sourceTree = "<group>"; };
 		ABAA1A782036475E005AF451 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		ABAA1A7A2036475E005AF451 /* AlertShowable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertShowable.swift; sourceTree = "<group>"; };
-		ABAA1A83203647DD005AF451 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ABAA1A84203647DD005AF451 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		ABAA1A85203647DD005AF451 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		ABAA1A86203647DD005AF451 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -63,6 +64,11 @@
 		ABAA1AA4203667FE005AF451 /* FirstNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNextViewController.swift; sourceTree = "<group>"; };
 		ABAA1AA620366809005AF451 /* FirstNextViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstNextViewController.storyboard; sourceTree = "<group>"; };
 		ABAA1AA8203668C9005AF451 /* FirstNextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstNextViewModel.swift; sourceTree = "<group>"; };
+		ABBBB1C22038FD070081ECB5 /* ErrorMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMatcher.swift; sourceTree = "<group>"; };
+		ABBBB1C32038FD070081ECB5 /* ErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		ABBBB1C42038FD070081ECB5 /* DefaultErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultErrorHandler.swift; sourceTree = "<group>"; };
+		ABBBB1C52038FD070081ECB5 /* NSErrorMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSErrorMatcher.swift; sourceTree = "<group>"; };
+		ABBBB1CB2038FEE10081ECB5 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		ABDA284C20379FD6009DA1E1 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,13 +102,14 @@
 		ABAA1A55203633DB005AF451 /* ErrorHandlerSample */ = {
 			isa = PBXGroup;
 			children = (
+				ABBBB1CA2038FEE10081ECB5 /* Views */,
+				ABBBB1C12038FD070081ECB5 /* ErrorHandler */,
 				ABAA1AA020365761005AF451 /* Extensions */,
 				ABAA1A9020364B64005AF451 /* Second */,
 				ABAA1A8D20364A1C005AF451 /* Models */,
 				ABAA1A82203647DD005AF451 /* Enums */,
 				ABAA1A772036475E005AF451 /* Protocols */,
 				ABAA1A7620364734005AF451 /* First */,
-				ABAA1A6820363413005AF451 /* ErrorHandler.swift */,
 				ABAA1A56203633DB005AF451 /* AppDelegate.swift */,
 				ABAA1A5D203633DB005AF451 /* Assets.xcassets */,
 				ABAA1A5F203633DB005AF451 /* LaunchScreen.storyboard */,
@@ -138,7 +145,6 @@
 			isa = PBXGroup;
 			children = (
 				ABAA1A9E203653B9005AF451 /* Device.swift */,
-				ABAA1A83203647DD005AF451 /* Constants.swift */,
 				ABAA1A84203647DD005AF451 /* Result.swift */,
 				ABAA1A85203647DD005AF451 /* Storyboard.swift */,
 				ABAA1A86203647DD005AF451 /* Errors.swift */,
@@ -181,6 +187,25 @@
 				ABAA1AA8203668C9005AF451 /* FirstNextViewModel.swift */,
 			);
 			path = Next;
+			sourceTree = "<group>";
+		};
+		ABBBB1C12038FD070081ECB5 /* ErrorHandler */ = {
+			isa = PBXGroup;
+			children = (
+				ABBBB1C22038FD070081ECB5 /* ErrorMatcher.swift */,
+				ABBBB1C32038FD070081ECB5 /* ErrorHandler.swift */,
+				ABBBB1C42038FD070081ECB5 /* DefaultErrorHandler.swift */,
+				ABBBB1C52038FD070081ECB5 /* NSErrorMatcher.swift */,
+			);
+			path = ErrorHandler;
+			sourceTree = "<group>";
+		};
+		ABBBB1CA2038FEE10081ECB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABBBB1CB2038FEE10081ECB5 /* AlertManager.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,21 +283,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABAA1AA22036576F005AF451 /* UIViewController+Extensions.swift in Sources */,
+				ABBBB1C82038FD070081ECB5 /* DefaultErrorHandler.swift in Sources */,
 				ABAA1A7D2036475E005AF451 /* StoryboardLoadable.swift in Sources */,
 				ABAA1A89203647DD005AF451 /* Storyboard.swift in Sources */,
 				ABAA1A6F2036371E005AF451 /* FirstFlowController.swift in Sources */,
 				ABAA1A9420364DB4005AF451 /* SecondViewController.swift in Sources */,
 				ABAA1AA9203668C9005AF451 /* FirstNextViewModel.swift in Sources */,
 				ABAA1A8C2036483D005AF451 /* FirstViewModel.swift in Sources */,
-				ABAA1A6920363413005AF451 /* ErrorHandler.swift in Sources */,
+				ABBBB1CC2038FEE10081ECB5 /* AlertManager.swift in Sources */,
 				ABAA1A8A203647DD005AF451 /* Errors.swift in Sources */,
 				ABAA1A9820364E17005AF451 /* SecondViewModel.swift in Sources */,
+				ABBBB1C72038FD070081ECB5 /* ErrorHandler.swift in Sources */,
 				ABAA1A8F20364A3F005AF451 /* User.swift in Sources */,
 				ABAA1A9F203653B9005AF451 /* Device.swift in Sources */,
 				ABAA1A88203647DD005AF451 /* Result.swift in Sources */,
 				ABAA1AA5203667FE005AF451 /* FirstNextViewController.swift in Sources */,
 				ABAA1A6B20363548005AF451 /* RootViewController.swift in Sources */,
-				ABAA1A87203647DD005AF451 /* Constants.swift in Sources */,
+				ABBBB1C92038FD070081ECB5 /* NSErrorMatcher.swift in Sources */,
+				ABBBB1C62038FD070081ECB5 /* ErrorMatcher.swift in Sources */,
 				ABAA1A7F2036475E005AF451 /* AlertShowable.swift in Sources */,
 				ABDA284D20379FD6009DA1E1 /* ApiClient.swift in Sources */,
 				ABAA1A9220364B9B005AF451 /* SecondFlowController.swift in Sources */,
