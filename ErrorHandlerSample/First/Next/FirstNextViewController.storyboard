@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Next View Controller-->
+        <scene sceneID="BzH-g9-XiP">
+            <objects>
+                <viewController storyboardIdentifier="FirstNextViewController" id="amj-eN-fRK" customClass="FirstNextViewController" customModule="ErrorHandlerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AKa-Es-T7d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCo-UK-5IZ">
+                                <rect key="frame" x="79.5" y="133" width="216" height="30"/>
+                                <state key="normal" title="Do you wanna throw first error?"/>
+                                <connections>
+                                    <action selector="errorButtonTapped:" destination="amj-eN-fRK" eventType="touchUpInside" id="cUo-Lf-Rem"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AtD-Q1-JL3">
+                                <rect key="frame" x="167" y="52" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UG-JL-aQl">
+                                <rect key="frame" x="62.5" y="195" width="249" height="30"/>
+                                <state key="normal" title="Do you wanna throw first next error?"/>
+                                <connections>
+                                    <action selector="firstNextErrorButtonTapped:" destination="amj-eN-fRK" eventType="touchUpInside" id="pgr-uN-1IX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mM-Hv-k4p">
+                                <rect key="frame" x="53.5" y="257" width="269" height="30"/>
+                                <state key="normal" title="Do you wanna throw unexpected error?"/>
+                                <connections>
+                                    <action selector="unexpectedButtonTapped:" destination="amj-eN-fRK" eventType="touchUpInside" id="9og-Y6-NIA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0c-BL-maj">
+                                <rect key="frame" x="85.5" y="319" width="205" height="30"/>
+                                <state key="normal" title="Do you wanna throw NSError?"/>
+                                <connections>
+                                    <action selector="nserrorButtonTapped:" destination="amj-eN-fRK" eventType="touchUpInside" id="KUq-QH-Fdk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t0c-BL-maj" firstAttribute="top" secondItem="2mM-Hv-k4p" secondAttribute="bottom" constant="32" id="3N6-dI-R0A"/>
+                            <constraint firstItem="9UG-JL-aQl" firstAttribute="centerX" secondItem="AKa-Es-T7d" secondAttribute="centerX" id="51k-4e-TrL"/>
+                            <constraint firstItem="AtD-Q1-JL3" firstAttribute="top" secondItem="auP-eK-d2C" secondAttribute="top" constant="32" id="I9a-Dr-bsc"/>
+                            <constraint firstItem="2mM-Hv-k4p" firstAttribute="centerX" secondItem="AKa-Es-T7d" secondAttribute="centerX" id="Lca-Dl-xYV"/>
+                            <constraint firstItem="AtD-Q1-JL3" firstAttribute="centerX" secondItem="AKa-Es-T7d" secondAttribute="centerX" id="T9L-H4-LX5"/>
+                            <constraint firstItem="2mM-Hv-k4p" firstAttribute="top" secondItem="9UG-JL-aQl" secondAttribute="bottom" constant="32" id="cc5-OW-6Xc"/>
+                            <constraint firstItem="9UG-JL-aQl" firstAttribute="top" secondItem="KCo-UK-5IZ" secondAttribute="bottom" constant="32" id="qT1-VU-WV9"/>
+                            <constraint firstItem="t0c-BL-maj" firstAttribute="centerX" secondItem="AKa-Es-T7d" secondAttribute="centerX" id="ugC-UM-cEW"/>
+                            <constraint firstItem="KCo-UK-5IZ" firstAttribute="centerX" secondItem="AKa-Es-T7d" secondAttribute="centerX" id="xV9-7Z-l41"/>
+                            <constraint firstItem="KCo-UK-5IZ" firstAttribute="top" secondItem="AtD-Q1-JL3" secondAttribute="bottom" constant="60" id="xqY-QX-aMV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="auP-eK-d2C"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="AtD-Q1-JL3" id="BVO-To-mnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVe-HW-4Yd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-348" y="150.67466266866569"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="DOP-a8-kfY">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="dV7-fv-Qt2" customClass="FirstViewController" customModule="ErrorHandlerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b2l-w1-pLi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foX-ml-eBB">
+                                <rect key="frame" x="171" y="318.5" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="dV7-fv-Qt2" eventType="touchUpInside" id="aSr-z4-tEz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnf-dV-Edp">
+                                <rect key="frame" x="149" y="380.5" width="76" height="30"/>
+                                <state key="normal" title="Go Second"/>
+                                <connections>
+                                    <action selector="goSecondButtonTapped:" destination="dV7-fv-Qt2" eventType="touchUpInside" id="iSE-m3-DOB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qnf-dV-Edp" firstAttribute="top" secondItem="foX-ml-eBB" secondAttribute="bottom" constant="32" id="aXW-ce-sjV"/>
+                            <constraint firstItem="foX-ml-eBB" firstAttribute="centerY" secondItem="b2l-w1-pLi" secondAttribute="centerY" id="bYw-7w-iEx"/>
+                            <constraint firstItem="qnf-dV-Edp" firstAttribute="centerX" secondItem="b2l-w1-pLi" secondAttribute="centerX" id="lM6-dp-iJF"/>
+                            <constraint firstItem="foX-ml-eBB" firstAttribute="centerX" secondItem="b2l-w1-pLi" secondAttribute="centerX" id="z55-Pd-fj0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="67t-8W-6IR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nVF-tH-nr8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-209" y="143"/>
+        </scene>
+    </scenes>
+</document>
