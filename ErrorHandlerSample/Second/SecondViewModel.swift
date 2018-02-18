@@ -2,17 +2,17 @@ import Foundation
 
 struct SecondViewModel {
     
-    private let errorHandler: ErrorHandleable
+    private let errorHandler: ErrorHandler
     
-    init(errorHandler: ErrorHandleable) {
+    init(errorHandler: ErrorHandler) {
         self.errorHandler = errorHandler
     }
     
     func throwError() throws {
-        errorHandler.throw(ApiError.secondError)
+        errorHandler.postError(ApiError.secondError)
     }
     
     func throwUnexpectedError() throws {
-        errorHandler.throw(UnexpectedError.only)
+        errorHandler.postError(UnexpectedError.only)
     }
 }

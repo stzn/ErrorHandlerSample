@@ -5,21 +5,14 @@ protocol SecondFlowDelegate: class {
 }
 
 
-final class SecondFlowController: UIViewController, AlertShowable {
+final class SecondFlowController: UIViewController {
 
     private let navigation = UINavigationController()
-    private let parentErrorHandler: ErrorHandleable
+    private let errorHandler: ErrorHandler
     weak var delegate: SecondFlowDelegate?
 
-    private var errorHandler: ErrorHandleable {
-        // RootViewControllerでcatchしているので、ここには来ない
-        return parentErrorHandler.catch(ApiError.secondError) { [weak self] error in
-            self?.showAlert(title: "Error", message: error.localizedDescription)
-        }
-    }
-    
-    init(_ parentErrorHandler: ErrorHandleable) {
-        self.parentErrorHandler = parentErrorHandler
+    init(_ errorHandler: ErrorHandler) {
+        self.errorHandler = errorHandler
         super.init(nibName: nil, bundle: nil)
         add(childController: navigation)
     }

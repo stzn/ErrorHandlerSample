@@ -2,9 +2,9 @@ import Foundation
 
 struct FirstViewModel {
     
-    private let errorHandler: ErrorHandleable
+    private let errorHandler: ErrorHandler
     
-    init(errorHandler: ErrorHandleable) {
+    init(errorHandler: ErrorHandler) {
         self.errorHandler = errorHandler
     }
     
@@ -14,7 +14,7 @@ struct FirstViewModel {
             case .success(let user):
                 callback(user)
             case .error(let error):
-                self.errorHandler.throw(error)
+                self.errorHandler.postError(error)
             }
         }
     }

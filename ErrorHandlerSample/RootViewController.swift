@@ -1,42 +1,29 @@
 import UIKit
 
-final class RootViewController: UIViewController, AlertShowable {
+final class RootViewController: UIViewController {
     
-    // Exclude from final error catch
-    private let excludeErrors: [ErrorMatcher] = [
-        { error in (error is ApiError) }
-    ]
-    
-    private lazy var errorHandler = {
-        
-        ErrorHandler()
-        .catch(UnexpectedError.self) { [unowned self] error in
-            self.showAlert(title: "Root Error", message: error.localizedDescription)
-        
-        }
-        .catch { [unowned self] error in
-
-            // Propagate
-            if self.excludeErrors.contains(where: { $0(error) }) {
-                throw error
-            }
-
-            // Final error catch
-            self.showAlert(title: "Root Error", message: "Somethig wrong!!!")
-        }
-    }()
+    private var errorHandler = ErrorHandler.default
+    private var token: NSObjectProtocol?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
+        
+        token = NotificationCenter.default.addObserver(forName: .errorOccured, object: nil, queue: nil) { [weak self] note in
+            guard let strongSelf = self,
+                let info = note.userInfo,
+                let error = info["error"] as? Error else {
+                    return
+            }
+            strongSelf.errorHandler.handle(error)
+        }
+    }
+    
+    deinit {
+        token = nil
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
     }
     
     func start() {

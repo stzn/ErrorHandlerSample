@@ -4,23 +4,14 @@ protocol FirstFlowDelegate: class {
     func firstFlowDidFinish(_ flowController: FirstFlowController)
 }
 
-
-final class FirstFlowController: UIViewController, AlertShowable {
+final class FirstFlowController: UIViewController {
     
     private let navigation = UINavigationController()
-    private let parentErrorHandler: ErrorHandleable
+    private let errorHandler: ErrorHandler
     weak var delegate: FirstFlowDelegate?
     
-    private var errorHandler: ErrorHandleable {
-        return parentErrorHandler.catch(ApiError.firstError) { [weak self] error in
-            self?.showAlert(title: "Error", message: error.localizedDescription)
-        }.catch(ApiError.firstNextError) { [weak self] error in
-            self?.showAlert(title: "Error", message: error.localizedDescription)
-        }
-    }
-
-    init(_ parentErrorHandler: ErrorHandleable) {
-        self.parentErrorHandler = parentErrorHandler
+    init(_ errorHandler: ErrorHandler) {
+        self.errorHandler = errorHandler
         super.init(nibName: nil, bundle: nil)
         add(childController: navigation)
     }
