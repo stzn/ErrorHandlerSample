@@ -13,30 +13,35 @@ struct FirstNextViewModel {
     func throwError() throws {
         
         asyncAction {
-            self.errorHandler.postError(ApiError.firstError)
+            throw ApiError.firstError
         }
     }
  
     func throwFirstNextError() throws {
         asyncAction {
-            self.errorHandler.postError(ApiError.firstNextError)
+            throw ApiError.firstNextError
         }
     }
 
     func throwUnexpectedError() throws {
         asyncAction {
-            self.errorHandler.postError(UnexpectedError.only)
+            throw UnexpectedError.only
         }
     }
     
     func throwNSError() throws {
         asyncAction {
-            self.errorHandler.postError(NSError(domain: "stzn.sample.nserror", code: 999, userInfo: ["message": "This is NSError!!"]))
+            throw NSError(domain: "stzn.sample.nserror", code: 999, userInfo: ["message": "This is NSError!!"])
         }
     }
-    func asyncAction(callback: @escaping () -> Void) {
+    func asyncAction(callback: @escaping () throws -> Void) {
         ApiClient.doAsync {
-            callback()
+            
+            do {
+                try callback()
+            } catch let error {
+                self.errorHandler.postError(error)
+            }
         }
     }
 }
